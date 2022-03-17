@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "baseUrl": "./",
+    "paths": {
+      "@zhengxs/*": ["./packages/*/src"]
+    },
+    "types": ["@types/jest"]
+  },
+  "include": ["packages/**/*", "packages/globals.d.ts", "scripts"],
+  "exclude": ["node_modules", "dist", "es", "lib"]
+}

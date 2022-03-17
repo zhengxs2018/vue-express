@@ -1,0 +1,16 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Vue Addons",
+  "entryPoints": ["packages/*"],
+  "entryPointStrategy": "Packages",
+  "out": "./docs/.vuepress/dist/api",
+  "readme": "none",
+  "validation": true,
+  "excludePrivate": true,
+  "excludeExternals": true,
+  "excludeInternal": true,
+  "disableSources": true,
+  "hideGenerator": true,
+  "includeVersion": true,
+  "cleanOutputDir": true
+}

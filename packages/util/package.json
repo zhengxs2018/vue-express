@@ -1,0 +1,23 @@
+{
+  "name": "@zhengxs/util",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "typedocMain": "src/index.ts",
+  "exports": {
+    "require": "./lib/index.js",
+    "import": "./es/index.js"
+  },
+  "sideEffects": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com",
+    "url": "https://github.com/zhengxs2018"
+  },
+  "license": "MIT"
+}

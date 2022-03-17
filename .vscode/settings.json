@@ -1,0 +1,21 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "vetur.format.enable": false,
+  "vetur.validation.style": false,
+  "vetur.validation.script": false,
+  "vetur.validation.template": false,
+  "volar.autoCompleteRefs": false,
+  "cSpell.words": [
+    "eruda",
+    "graphviz",
+    "jssdk",
+    "pinia",
+    "pxtorem",
+    "unref",
+    "vetur"
+  ]
+}
