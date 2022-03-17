@@ -20,7 +20,7 @@
 
 ## 启动项目
 
-你需要安装 [Node.js][nodejs] 的版本为 >= 10+.
+你需要安装 [Node.js][nodejs] 的版本为 >= 14.8+.
 
 克隆此仓库后运行:
 
@@ -116,7 +116,7 @@ package/
 
 [MIT](./LICENSE)
 
-
+[nodejs]: https://nodejs.org/
 [vetur]: https://marketplace.visualstudio.com/items?itemName=octref.vetur
 [volar]: https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar
 [takeover-mode]: https://vuejs.org/guide/typescript/overview.html#takeover-mode
