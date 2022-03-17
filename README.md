@@ -1,8 +1,4 @@
-# VueExpress
-
-让前端开发更加简单规范.
-
-# Vue Mobile Express
+# Vue Express
 
 [![TypeScript](https://img.shields.io/badge/lang-typescript-informational?style=flat)](https://www.typescriptlang.org)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
