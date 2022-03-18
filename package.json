@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "ts-node --transpileOnly ./scripts/clean.ts",
     "apps:vant": "yarn workspace @zhengxs/vant-app",
+    "apps:uni": "yarn workspace @zhengxs/uni-app",
     "libs:dev": "yarn libs:build --watch",
     "libs:build": "tsc -b tsconfig.build.json",
     "docs:build": "vuepress build docs --clean-cache",

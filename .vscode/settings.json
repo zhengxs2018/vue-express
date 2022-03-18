@@ -1,4 +1,8 @@
 {
+  "files.associations": {
+    "manifest.json": "jsonc",
+    "pages.json": "jsonc"
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -8,15 +12,28 @@
   "vetur.validation.style": false,
   "vetur.validation.script": false,
   "vetur.validation.template": false,
+  "volar.tsPlugin": true,
+  "volar.icon.preview": true,
+  "volar.icon.finder": true,
   "volar.autoCompleteRefs": false,
   "cSpell.words": [
+    "alipay",
+    "autoclose",
+    "automator",
+    "dcloudio",
     "eruda",
     "graphviz",
     "jssdk",
+    "kuaishou",
+    "nvue",
     "pinia",
     "pxtorem",
+    "quickapp",
+    "splashscreen",
+    "toutiao",
     "unref",
     "vant",
-    "vetur"
+    "vetur",
+    "weixin"
   ]
 }

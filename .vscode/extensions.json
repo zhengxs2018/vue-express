@@ -5,5 +5,8 @@
     "streetsidesoftware.code-spell-checker",
     "editorconfig.editorconfig",
     "axetroy.vscode-npm-import-package-version"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur"
   ]
 }
