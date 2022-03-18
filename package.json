@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "ts-node --transpileOnly ./scripts/clean.ts",
-    "mobile": "yarn workspace @zhengxs/mobile.app",
+    "apps:vant": "yarn workspace @zhengxs/vant-app",
     "libs:dev": "yarn libs:build --watch",
     "libs:build": "tsc -b tsconfig.build.json",
     "docs:build": "vuepress build docs --clean-cache",
@@ -19,8 +19,8 @@
     "test:coverage": "yarn test --coverage"
   },
   "workspaces": [
-    "./apps/*",
-    "./packages/*"
+    "./packages/*",
+    "./templates/*"
   ],
   "devDependencies": {
     "@lerna/filter-packages": "^4.0.0",

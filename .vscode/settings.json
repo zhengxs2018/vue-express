@@ -16,6 +16,7 @@
     "pinia",
     "pxtorem",
     "unref",
+    "vant",
     "vetur"
   ]
 }
