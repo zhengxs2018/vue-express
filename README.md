@@ -28,7 +28,10 @@ $ yarn install
 $ yarn libs:dev
 
 # 启动移动端应用
-$ yarn mobile dev
+$ yarn apps:vant dev
+
+# 启动跨端应用
+$ yarn apps:uni dev
 ```
 
 ## 目录结构
