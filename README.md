@@ -91,9 +91,23 @@ package/
 - [sass-bem](https://github.com/zgabievi/sass-bem) - 即将引入
 - [normalizr](https://github.com/paularmstrong/normalizr) - 即将引入
 
-## for VS Code 用户
 
-> 对于 VSCode 用户请安装并手动启用 [volar][volar] 插件
+### 支持多根工作区
+
+`code.code-workspace` 是 VSCode 的工作区配置文件，使用工具区的好处是可以将目录进行拆分显示。
+
+```sh
+# 可以直接使用 VSCode 打开
+$ code ./code.code-workspace
+```
+
+同时工作区还预设了启动配置，使用 `运行和调试` 功能直接启动项目。
+
+可以点击[这里](https://code.visualstudio.com/docs/editor/multi-root-workspaces)了解更多工作区的介绍。
+
+### 更好的类型提示
+
+> 推荐安装并手动启用 [volar][volar] 插件
 
 1. 默认停用 [vetur][vetur] 插件及相关配置.
 2. 推荐启用 [volar][volar] 的低能耗 (**lowPowerMode**) 功能，为节能减排做贡献
