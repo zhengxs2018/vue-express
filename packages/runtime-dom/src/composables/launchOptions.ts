@@ -1,32 +1,33 @@
 import { inBrowser } from '@zhengxs/cross-env'
 
-import { shallowRef, unref } from 'vue'
+import { shallowRef } from 'vue'
 import type { Ref } from 'vue'
 
 /**
  * 启动配置
  */
-export interface LaunchOptions {
+export type LaunchOptions = {
   location: URL
   searchParams: URLSearchParams
-  shopId: string | null
 }
 
 export type LaunchOptionsRef = Ref<LaunchOptions>
 
+// TODO 支持自定义 keys 配置
 const resolveLaunchOptions = (url: string): LaunchOptions => {
   const location = new URL(url)
   const searchParams = location.searchParams
 
   return {
     location,
-    searchParams,
-    shopId: searchParams.get('shopId')
+    searchParams
   }
 }
 
 /**
  * 启动配置参数
+ *
+ * 不推荐 SSR 环境使用
  */
 const launchOptions: LaunchOptionsRef = shallowRef(
   resolveLaunchOptions(inBrowser ? window.location.href : 'file:')
@@ -45,4 +46,4 @@ export const setupLaunchUrl = (url: string) => {
  *
  * @returns 启动配置
  */
-export const useLaunchOptions = (): LaunchOptions => unref(launchOptions)
+export const useLaunchOptions = (): LaunchOptionsRef => launchOptions

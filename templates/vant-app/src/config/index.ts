@@ -1,4 +1,4 @@
-import { defineConfig } from '@zhengxs/client'
+import { defineConfig } from '@zhengxs/runtime-dom'
 
 import routes from './routes'
 

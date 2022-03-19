@@ -21,7 +21,7 @@
         "restart": true,
         "request": "launch",
         "cwd": "${workspaceFolder:uni-app}",
-        "preLaunchTask": "libs:dev",
+        "preLaunchTask": "dev",
         "runtimeExecutable": "yarn",
         "runtimeArgs": [
           "dev:h5",
@@ -37,7 +37,7 @@
         "restart": true,
         "request": "launch",
         "cwd": "${workspaceFolder:vant-app}",
-        "preLaunchTask": "libs:dev",
+        "preLaunchTask": "dev",
         "runtimeExecutable": "yarn",
         "runtimeArgs": [
           "dev",
@@ -53,10 +53,10 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "libs:dev",
+        "label": "dev",
         "type": "shell",
         "command": "yarn",
-        "args": ["libs:dev"],
+        "args": ["dev"],
         "problemMatcher": "$tsc-watch",
         "promptOnClose": true,
         "runOptions": {

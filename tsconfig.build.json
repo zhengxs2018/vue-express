@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "references": [
     {
-      "path": "./packages/runtime/tsconfig.build.json"
+      "path": "./packages/cross-env/tsconfig.build.json"
     },
     {
       "path": "./packages/util/tsconfig.build.json"
@@ -11,7 +11,13 @@
       "path": "./packages/shared/tsconfig.build.json"
     },
     {
-      "path": "./packages/client/tsconfig.build.json"
+      "path": "./packages/core/tsconfig.build.json"
+    },
+    {
+      "path": "./packages/runtime-dom/tsconfig.build.json"
+    },
+    {
+      "path": "./packages/runtime-uni/tsconfig.build.json"
     }
   ],
   "files": []

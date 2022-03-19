@@ -1,4 +1,4 @@
-import { runApp } from '@zhengxs/client'
+import { runApp } from '@zhengxs/runtime-dom'
 import { Toast } from 'vant'
 
 import './index.css'

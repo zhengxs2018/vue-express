@@ -46,12 +46,10 @@
     "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/uni-ui": "^1.4.12",
-    "@zhengxs/runtime": "~0.0.1",
-    "@zhengxs/shared": "~0.0.1",
-    "pinia": "^2.0.12",
+    "@zhengxs/cross-env": "~0.0.1",
+    "@zhengxs/runtime-uni": "~0.0.1",
     "vue": "^3.2.31",
-    "vue-i18n": "^9.1.9",
-    "vuex": "^4.0.2"
+    "vue-i18n": "^9.1.9"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.5.18",

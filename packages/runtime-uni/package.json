@@ -1,0 +1,34 @@
+{
+  "name": "@zhengxs/runtime-uni",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "typedocMain": "src/index.ts",
+  "exports": {
+    "require": "./lib/index.js",
+    "import": "./es/index.js"
+  },
+  "sideEffects": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "peerDependencies": {
+    "vue": "3",
+    "pinia": "2"
+  },
+  "dependencies": {
+    "@zhengxs/cross-env": "~0.0.1"
+  },
+  "devDependencies": {
+    "vue": "^3.2.13",
+    "pinia": "^2.0.11"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com",
+    "url": "https://github.com/zhengxs2018"
+  },
+  "license": "MIT"
+}

@@ -1,4 +1,4 @@
-import { defineClientAppEnhance } from '@zhengxs/client'
+import { defineClientAppEnhance } from '@zhengxs/runtime-dom'
 
 import { useLaunchOptions } from '../composables'
 import { httpClient } from '../services'

@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@zhengxs/client": "~0.0.1",
+    "@zhengxs/runtime-dom": "~0.0.1",
     "axios": "^0.26.1",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.11",

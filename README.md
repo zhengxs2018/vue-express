@@ -9,10 +9,12 @@
 
 ![依赖关系图](./dependency-tree.png)
 
-- `@zhengxs/client` - 客户端封装
-- `@zhengxs/runtime` - 运行时处理
-- `@zhengxs/shared` - 通用类型和助手函数
-- `@zhengxs/util` - 基础工具函数
+- `@zhengxs/runtime-dom` - 用于支持浏览器
+- `@zhengxs/runtime-uni` - 用于支持 uni-app
+- `@zhengxs/core` - 核心功能与跨平台组件
+- `@zhengxs/shared` - 支持不同环境下使用的 vue3 类型和函数
+- `@zhengxs/cross-env` - 用于抹平不同运行时的 API 调用
+- `@zhengxs/util` - 与环境无关的工具函数
 
 ## 启动项目
 
