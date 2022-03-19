@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 const title = ref('Hello')
 </script>
 
@@ -7,6 +8,7 @@ const title = ref('Hello')
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
+      <uni-badge text="1"></uni-badge>
       <text class="title">{{ title }}</text>
     </view>
   </view>

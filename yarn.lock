@@ -1316,6 +1316,11 @@
     "@dcloudio/uni-cli-shared" "3.0.0-alpha-3040220220310005"
     debug "^4.3.3"
 
+"@dcloudio/uni-ui@^1.4.12":
+  version "1.4.12"
+  resolved "https://registry.npmmirror.com/@dcloudio/uni-ui/-/uni-ui-1.4.12.tgz#0482929068780ed7373aff3535fb4433cade22a1"
+  integrity sha512-sGVHU8Fz/L6NtrsClw8d38SPI16oCgBBQ7fYBVTV1hgS8brFVL56ti9tbY/Qx5qw6+ZPzAzb9lfiG6Tqi4kIJw==
+
 "@dcloudio/vite-plugin-uni@^3.0.0-alpha-3040220220310005":
   version "3.0.0-alpha-3040220220310005"
   resolved "https://registry.npmmirror.com/@dcloudio/vite-plugin-uni/-/vite-plugin-uni-3.0.0-alpha-3040220220310005.tgz#921a11d384ebfbb524a175be9e26e445b8cc664f"
@@ -9316,7 +9321,7 @@ pify@^5.0.0:
   resolved "https://registry.npmmirror.com/pify/-/pify-5.0.0.tgz#1f5eca3f5e87ebec28cc6d54a0e4aaf00acc127f"
   integrity sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==
 
-pinia@^2.0.11:
+pinia@^2.0.11, pinia@^2.0.12:
   version "2.0.12"
   resolved "https://registry.npmmirror.com/pinia/-/pinia-2.0.12.tgz#4c6f7f59cb41f56f20deee71c403e66d8d3c637d"
   integrity sha512-tUeuYGFrLU5irmGyRAIxp35q1OTcZ8sKpGT4XkPeVcG35W4R6cfXDbCGexzmVqH5lTQJJTXXbNGutIu9yS5yew==
@@ -10173,6 +10178,29 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.npmmirror.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sass-bem@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.npmmirror.com/sass-bem/-/sass-bem-2.6.5.tgz#3f53128c6b2b539e4323dbcaaefcdfcb481f1d53"
+  integrity sha512-3KQt19LSNRJPr+V5ZGPLQuMhXVG+UtaUZt2UJvZRfPd0CRRgogUlapxfsxwSbcK/oKhgY0Qe0MYVksPFeFQwew==
+  dependencies:
+    sass-config "^1.1.1"
+
+sass-config@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.npmmirror.com/sass-config/-/sass-config-1.1.2.tgz#93037b4cd067caa5003ab94bfcd922ef2b92a759"
+  integrity sha512-54dIJYkmsOq//l8YxP25BxdY0L2jgo3pNHmoEXxeP5VzFOgYmS4Uv6C1j504um8UEmSrp6hNNmuGxK93NNA5Mw==
+
+sass-loader@10.1.1:
+  version "10.1.1"
+  resolved "https://registry.npmmirror.com/sass-loader/-/sass-loader-10.1.1.tgz#4ddd5a3d7638e7949065dd6e9c7c04037f7e663d"
+  integrity sha512-W6gVDXAd5hR/WHsPicvZdjAWHBcEJ44UahgxcIE196fW2ong0ZHMPO1kZuI5q0VlvMQZh32gpv69PLWQm70qrw==
+  dependencies:
+    klona "^2.0.4"
+    loader-utils "^2.0.0"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    semver "^7.3.2"
+
 sass-loader@^12.0.0, sass-loader@^12.1.0, sass-loader@^12.4.0:
   version "12.6.0"
   resolved "https://registry.npmmirror.com/sass-loader/-/sass-loader-12.6.0.tgz#5148362c8e2cdd4b950f3c63ac5d16dbfed37bcb"
@@ -10181,7 +10209,7 @@ sass-loader@^12.0.0, sass-loader@^12.1.0, sass-loader@^12.4.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.32.7, sass@^1.49.0:
+sass@^1.32.7, sass@^1.49.0, sass@^1.49.9:
   version "1.49.9"
   resolved "https://registry.npmmirror.com/sass/-/sass-1.49.9.tgz#b15a189ecb0ca9e24634bae5d1ebc191809712f9"
   integrity sha512-YlYWkkHP9fbwaFRZQRXgDi3mXZShslVmmo+FVK3kHLUELHHEYrCmL1x6IUjC7wLS6VuJSAFXRQS/DxdsC4xL1A==

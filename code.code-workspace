@@ -1,0 +1,82 @@
+{
+  "folders": [
+    {
+      "name": "uni-app",
+      "path": "templates/uni-app"
+    },
+    {
+      "name": "vant-app",
+      "path": "templates/vant-app"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ],
+  "launch": {
+    "configurations": [
+      {
+        "name": "Launch uni-app",
+        "type": "pwa-node",
+        "restart": true,
+        "request": "launch",
+        "cwd": "${workspaceFolder:uni-app}",
+        "preLaunchTask": "libs:dev",
+        "runtimeExecutable": "yarn",
+        "runtimeArgs": [
+          "dev:h5:ssr",
+          "--port=3000"
+        ],
+        "skipFiles": [
+          "<node_internals>/**"
+        ]
+      },
+      {
+        "name": "Launch vant-app",
+        "type": "pwa-node",
+        "restart": true,
+        "request": "launch",
+        "cwd": "${workspaceFolder:vant-app}",
+        "preLaunchTask": "libs:dev",
+        "runtimeExecutable": "yarn",
+        "runtimeArgs": [
+          "dev",
+          "--port=3001"
+        ],
+        "skipFiles": [
+          "<node_internals>/**"
+        ]
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "libs:dev",
+        "type": "shell",
+        "command": "yarn",
+        "args": ["libs:dev"],
+        "problemMatcher": "$tsc-watch",
+        "promptOnClose": true,
+        "runOptions": {
+          "instanceLimit": 1,
+        },
+        "options": {
+          "cwd": "${workspaceFolder:root}"
+        },
+        "isBackground": true
+      }
+    ]
+  },
+  "settings": {
+    "files.associations": {
+      "manifest.json": "jsonc",
+      "pages.json": "jsonc"
+    },
+    "vetur.format.enable": false,
+    "vetur.validation.style": false,
+    "vetur.validation.script": false,
+    "vetur.validation.template": false
+  }
+}
