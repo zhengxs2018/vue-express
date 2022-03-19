@@ -44,11 +44,8 @@ src/
 ├── components/                      # 全局组件
 ├── composables/                     # 组合函数
 ├── config/  
-│   ├── clientAppEnhance.ts          # 应用启动前的逻辑
-│   ├── routes.ts                    # 路由配置
-│   ├── setupHospitalInfo.ts         # 配置医院信息
-│   ├── setupHttpConfig.ts           # HTTP 全局配置
-│   └── setupKeepQueryString.ts      # 保持路由上的查询条件
+│   ├── clientAppEnhance.ts          # 应用启动前的逻辑处理
+│   └── routes.ts                    # 路由配置
 ├── services/
 │   ├── api/  
 │   │   ├── data/                    # 模拟数据
