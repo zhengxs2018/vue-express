@@ -27,13 +27,13 @@
 $ yarn install
 
 # 启动依赖模块打包
-$ yarn libs:dev
+$ yarn dev
 
 # 启动移动端应用
-$ yarn apps:vant dev
+$ yarn vant-app dev
 
 # 启动跨端应用
-$ yarn apps:uni dev
+$ yarn uni-app dev
 ```
 
 ## 目录结构
