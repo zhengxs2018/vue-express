@@ -24,7 +24,7 @@
         "preLaunchTask": "libs:dev",
         "runtimeExecutable": "yarn",
         "runtimeArgs": [
-          "dev:h5:ssr",
+          "dev:h5",
           "--port=3000"
         ],
         "skipFiles": [
