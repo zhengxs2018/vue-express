@@ -1,23 +1,16 @@
-import { inBrowser } from '@zhengxs/cross-env'
-
-import { createApp, createSSRApp, h } from 'vue'
+import { createSSRApp, h } from 'vue'
 import { createPinia } from 'pinia'
 
 import type { CreateVueAppFunction } from '../types'
 
 import { resolveAppOptions } from './resolveAppOptions'
 
-const appCreator = inBrowser ? createApp : createSSRApp
-
-export const createVueApp: CreateVueAppFunction = async (
-  RootComponent,
-  config
-) => {
+export const createVueApp: CreateVueAppFunction = (RootComponent, config) => {
   const options = resolveAppOptions(config)
 
   const { clientAppSetups, clientAppEnhances } = options
 
-  const app = appCreator({
+  const app = createSSRApp({
     name: 'VueExpress',
     setup() {
       for (const clientAppSetup of clientAppSetups) {
@@ -34,8 +27,9 @@ export const createVueApp: CreateVueAppFunction = async (
   app.use(createPinia())
 
   for (const clientAppEnhance of clientAppEnhances) {
-    await clientAppEnhance({ app })
+    clientAppEnhance({ app })
   }
+
   return {
     app
   }
