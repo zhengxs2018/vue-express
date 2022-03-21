@@ -56,6 +56,8 @@
     "@dcloudio/uni-automator": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3040220220310005",
+    "@types/mockjs": "^1.0.6",
+    "mockjs": "^1.1.0",
     "sass": "^1.49.9",
     "sass-bem": "^2.6.5",
     "sass-loader": "10.1.1",

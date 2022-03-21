@@ -2,12 +2,10 @@
 import { onLaunch, onPageNotFound } from '@dcloudio/uni-app'
 
 onLaunch(() => {
-  uni.onTabBarMidButtonTap(() => {
-    console.log(1)
-  })
+  // pass
 })
 
 onPageNotFound(() => {
-  uni.navigateTo({ url: '/pages/errors/404' })
+  // pass
 })
 </script>

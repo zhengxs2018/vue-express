@@ -1,7 +1,9 @@
-import { createVueAppSync } from '@zhengxs/runtime-uni'
+import { createSSRApp } from 'vue'
 
 import App from './App.vue'
 
 export function createApp() {
-  return createVueAppSync(App, {})
+  const app = createSSRApp(App)
+
+  return { app }
 }

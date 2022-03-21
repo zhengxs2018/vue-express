@@ -7,21 +7,27 @@
   },
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": "观看为你推荐的热门视频 | TikTok"
       }
     },
     {
-      "path": "pages/about/index",
+      "path": "pages/discover/index",
       "style": {
-        "navigationBarTitleText": "关于我们"
+        "navigationBarTitleText": "发现"
       }
     },
     {
-      "path": "pages/errors/404",
+      "path": "pages/inbox/index",
       "style": {
-        "navigationBarTitleText": "页面不存在"
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的"
       }
     }
   ],
@@ -32,52 +38,69 @@
     "backgroundColor": "#020202",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/index",
+        "iconPath": "./static/icons/home.svg",
         "text": "首页"
       },
       {
-        "pagePath": "pages/about/index",
-        "text": "关于"
+        "pagePath": "pages/discover/index",
+        "iconPath": "./static/icons/discover.svg",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/inbox/index",
+        "iconPath": "./static/icons/inbox.svg",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "./static/icons/profile.svg",
+        "text": "我的"
       }
     ],
     "midButton": {
-      "width": "80px",
-      "height": "50px",
-      "text": "添加"
+      "width": "79px",
+      "iconPath": "./static/icons/create.svg",
+      "iconWidth": "49px"
     }
   },
   "subPackages": [
     {
-      "root": "settings",
+      "root": "live",
       "pages": [
         {
           "path": "index/index",
           "style": {
-            "navigationBarTitleText": "设置"
+            "navigationBarTitleText": "直播间"
+          }
+        }
+      ]
+    },
+    {
+      "root": "shop",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationBarTitleText": "店铺"
           }
         }
       ]
     }
   ],
   "preloadRule": {
-    "settings/index/index": {
+    "live/index/index": {
       "network": "all",
       "packages": [
         "__APP__"
       ]
     }
   },
-  // 启动模式配置
-  // See https://uniapp.dcloud.io/collocation/pages.html#condition
-  "condition": {
-    "current": 0,
-    "list": []
-  },
   "easycom": {
     "autoscan": true,
     "custom": {
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
-      "^ux-(.*)": "@/components/uni-$1.vue"
+      "^ux-(.*)": "@/components/ux-$1.vue"
     }
   }
 }
