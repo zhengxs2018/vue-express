@@ -3,7 +3,8 @@
   "compilerOptions": {
     "module": "ESNext",
     "rootDir": "./src",
-    "outDir": "./es"
+    "outDir": "./es",
+    "types": ["@dcloudio/types"]
   },
   "include": ["./src"]
 }
