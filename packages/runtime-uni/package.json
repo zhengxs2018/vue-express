@@ -16,14 +16,16 @@
   ],
   "peerDependencies": {
     "vue": "3",
-    "pinia": "2"
+    "pinia": "2",
+    "@dcloudio/uni-app": "3"
   },
   "dependencies": {
     "@zhengxs/cross-env": "~0.0.1"
   },
   "devDependencies": {
     "vue": "^3.2.13",
-    "pinia": "^2.0.11"
+    "pinia": "^2.0.11",
+    "@dcloudio/uni-app": "^3.0.0-alpha-3040220220310005"
   },
   "author": {
     "name": "zhengxs2018",
