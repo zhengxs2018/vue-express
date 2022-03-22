@@ -1,4 +1,4 @@
-import Mock from 'better-mock'
+import Mock from 'mocks'
 
 import type { ShopDefinition } from '/@/shared'
 import type { ServiceResponse } from '../types'
