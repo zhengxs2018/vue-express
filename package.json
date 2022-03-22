@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "yarn build --watch",
     "build": "tsc -b tsconfig.build.json",
     "clean": "ts-node --transpileOnly ./scripts/clean.ts",
+    "copy": "lerna run copy --stream",
+    "copy-watch": "lerna run copy --parallel -- --watch",
+    "dev": "yarn copy-watch & yarn build --watch",
     "vant-app": "yarn workspace @zhengxs/vant-app",
     "uni-app": "yarn workspace @zhengxs/uni-app",
     "docs:build": "vuepress build docs --clean-cache",
