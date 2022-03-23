@@ -1,0 +1,40 @@
+{
+  "name": "@zhengxs/uni-tiktok",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "typedocMain": "src/index.ts",
+  "scripts": {
+    "copy": "yarn copy:lib & yarn copy:es",
+    "copy:lib": "cpx \"src/**/*.{d.ts,vue,scss}\" lib",
+    "copy:es": "cpx \"src/**/*.{d.ts,vue,scss}\" es"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "peerDependencies": {
+    "@dcloudio/uni-app": "3",
+    "vue": "3"
+  },
+  "peerDependenciesMeta": {
+    "@dcloudio/uni-app": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "sass-bem": "^2.6.5"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-app": "^3.0.0-alpha-3040220220310005",
+    "@dcloudio/types": "^2.5.18",
+    "vue": "^3.2.13"
+  },
+  "author": {
+    "name": "zhengxs2018",
+    "email": "zhengxs2018@foxmail.com",
+    "url": "https://github.com/zhengxs2018"
+  },
+  "license": "MIT"
+}

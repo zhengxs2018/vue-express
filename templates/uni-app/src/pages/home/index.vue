@@ -20,7 +20,13 @@ onBeforeMount(fetcher)
 </script>
 
 <template>
-  <ux-player :loading="loading" :posts="posts"></ux-player>
+  <ux-player class="player" :posts="posts"></ux-player>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+$--window-content: calc(100vh - var(--window-top) - var(--window-bottom));
+
+.player {
+  height: $--window-content;
+}
+</style>

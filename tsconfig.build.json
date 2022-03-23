@@ -18,6 +18,10 @@
     },
     {
       "path": "./packages/runtime-uni/tsconfig.build.json"
+    },
+    // Uni Components
+    {
+      "path": "./packages/uni-tiktok/tsconfig.build.json"
     }
   ],
   "files": []

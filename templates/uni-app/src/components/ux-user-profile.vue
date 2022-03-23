@@ -15,12 +15,11 @@ const props = defineProps({
 
 <template>
   <view class="ux-user-profile">
-    <ux-avatar
+    <tt-avatar
       class="ux-user-profile__avatar"
       src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9701bd0bf9cf262db8dd4ca9b6323349~c5_100x100.jpeg?x-expires=1647849600&x-signature=zYP5vI01c0Y1WGOgbD0BJRxdEec%3D"
       width="96px"
       height="96px"
-      circle
     />
     <view class="ux-user-profile__nickname">@{{ props.user.nickname }}</view>
     <view class="ux-user-profile__stats">

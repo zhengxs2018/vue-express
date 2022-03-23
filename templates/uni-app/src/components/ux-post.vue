@@ -16,7 +16,14 @@ const props = defineProps({
    *
    * 如：首页列表
    */
-  value: Object as PropType<PostSchema>
+  value: Object as PropType<PostSchema>,
+  /**
+   * 显示封面图
+   */
+  showPostCover: {
+    type: Boolean,
+    default: true
+  }
 })
 
 const post = ref<PostSchema | undefined>(props.value)
@@ -32,7 +39,8 @@ watchEffect(() => {
 <template>
   <view class="ux-post">
     <image
-      class="ux-post__player-cover"
+      v-show="showPostCover"
+      class="ux-post__cover"
       :src="video?.cover"
       mode="scaleToFill"
     />
@@ -50,7 +58,7 @@ watchEffect(() => {
   width: 100%;
   height: 100%;
 
-  @include element('player-cover') {
+  @include element('cover') {
     position: absolute;
     top: 50%;
     left: 0px;

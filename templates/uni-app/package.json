@@ -48,6 +48,7 @@
     "@dcloudio/uni-ui": "^1.4.12",
     "@zhengxs/cross-env": "~0.0.1",
     "@zhengxs/runtime-uni": "~0.0.1",
+    "@zhengxs/uni-tiktok": "~0.0.1",
     "vue": "^3.2.31",
     "vue-i18n": "^9.1.9"
   },

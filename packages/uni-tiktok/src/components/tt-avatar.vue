@@ -1,9 +1,18 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, PropType } from 'vue'
 
 const props = defineProps({
+  /**
+   * 	图片类头像的资源地址
+   */
   src: String,
-  circle: Boolean,
+  /**
+   * 指定头像的形状
+   */
+  shape: {
+    type: String as PropType<'circle' | 'square'>,
+    default: 'circle'
+  },
   width: {
     type: [Number, String],
     default: '49px'
@@ -15,23 +24,21 @@ const props = defineProps({
 })
 
 const style = computed(() => {
-  return {
-    width: props.width,
-    height: props.height
-  }
+  const { width, height } = props
+  return { width, height }
 })
 </script>
 
 <template>
-  <view class="ux-avatar ux-avatar--circle" :style="style">
-    <image class="ux-avatar__image" :src="props.src" mode="scaleToFill" />
+  <view class="tt-avatar" :class="`tt-avatar--${shape}`" :style="style">
+    <image class="tt-avatar__image" :src="src" mode="scaleToFill" />
   </view>
 </template>
 
 <style lang="scss">
 @import 'sass-bem/bem';
 
-@include component('avatar', 'ux') {
+@include component('avatar', 'tt') {
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -1,32 +1,25 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import type { PropType } from 'vue'
+
+import type { VideoPlayer } from '@zhengxs/uni-tiktok'
 import type { PostSchema } from '../shared'
 
+// TODO 播放器需要重构
+// 1. 支持图集播放
+// 2. 支持进度拖拽
+
 const props = defineProps({
+  initialTime: Number,
   /**
-   * 加载状态
+   * 指定帖子初始索引位置
    */
-  loading: {
-    type: Boolean,
-    default: false
-  },
-  /**
-   * 索引位置
-   */
-  index: {
+  initialIndex: {
     type: Number,
     default: 0
   },
   /**
-   * 当前时间
-   */
-  currentTime: {
-    type: Number,
-    default: 0
-  },
-  /**
-   * 文章列表
+   * 帖子列表
    */
   posts: {
     type: Array as PropType<PostSchema[]>,
@@ -34,54 +27,63 @@ const props = defineProps({
   }
 })
 
-const playing = ref(false)
+const emit = defineEmits(['change'])
+
+const isSwiping = ref<boolean>(false)
+const player = ref<VideoPlayer | null>(null)
+
+const index = ref(props.initialIndex)
+const item = computed(() => props.posts[index.value])
+const videoSrc = computed(() => item.value?.video?.downloadAddr)
+
+const handleChange = (event: CustomEvent<{ current: number }>) => {
+  index.value = event.detail.current
+  emit('change', event)
+}
 
 const handleTransitionStart = () => {
-  playing.value = false
+  isSwiping.value = true
+  player.value?.pause()
 }
 
 const handleTransitionEnd = () => {
-  playing.value = true
+  isSwiping.value = false
+  player.value?.play()
 }
 </script>
 
 <template>
-  <swiper
-    class="ux-player"
-    :autoplay="false"
-    vertical
-    @transition="handleTransitionStart"
-    @animationfinish="handleTransitionEnd"
-  >
-    <swiper-item v-for="item of props.posts" :key="item.id">
-      <ux-post :value="item"></ux-post>
-    </swiper-item>
-  </swiper>
-
-  <!-- <ux-video-player class="ux-player__video"></ux-video-player> -->
+  <tt-video-player class="ux-player" :src="videoSrc" ref="player">
+    <template v-slot="{ paused }">
+      <swiper
+        class="ux-player__posts"
+        :autoplay="false"
+        :current="index"
+        vertical
+        @change="handleChange"
+        @transition="handleTransitionStart"
+        @animationfinish="handleTransitionEnd"
+      >
+        <swiper-item v-for="item of props.posts" :key="item.id">
+          <ux-post :show-post-cover="isSwiping || paused" :value="item" />
+          <!-- <tt-video-player-play-btn></tt-video-player-play-btn> -->
+        </swiper-item>
+      </swiper>
+    </template>
+  </tt-video-player>
 </template>
 
 <style lang="scss">
 @import 'sass-bem/bem';
 
-$--window-content: calc(100vh - var(--window-top) - var(--window-bottom));
-
 @include component('player', 'ux') {
-  height: $--window-content;
-
-  @include is('swiping') {
-    @include element('video') {
-      opacity: 0;
-    }
-  }
-
-  @include element('video') {
-    opacity: 1;
-    top: 0px;
+  @include element('posts') {
     position: absolute;
-    width: 100vw;
-    height: $--window-content;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
   }
 }
 </style>

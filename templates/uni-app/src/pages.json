@@ -100,6 +100,7 @@
     "autoscan": true,
     "custom": {
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      "^tt-(.*)": "@zhengxs/uni-tiktok/es/components/tt-$1.vue",
       "^ux-(.*)": "@/components/ux-$1.vue"
     }
   }

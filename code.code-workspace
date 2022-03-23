@@ -9,6 +9,10 @@
       "path": "templates/vant-app"
     },
     {
+      "name": "uni-tiktok",
+      "path": "packages/uni-tiktok"
+    },
+    {
       "name": "root",
       "path": "."
     }
@@ -77,6 +81,11 @@
     "vetur.format.enable": false,
     "vetur.validation.style": false,
     "vetur.validation.script": false,
-    "vetur.validation.template": false
+    "vetur.validation.template": false,
+    "cSpell.words": [
+      "animationfinish",
+      "tiktok",
+      "dcloudio"
+    ]
   }
 }

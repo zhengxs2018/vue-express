@@ -1,22 +1,41 @@
 <script lang="ts" setup>
-import type { PropType } from 'vue'
-
-import type { Author } from '../shared'
-
 const props = defineProps({
-  author: {
-    type: Object as PropType<Author>,
-    required: true
-  }
+  /**
+   * 异步加载状态
+   */
+  loading: Boolean,
+  /**
+   * 用户头像
+   */
+  src: String,
+  /**
+   * 是否关注
+   */
+  followed: Boolean,
+  /**
+   * 关注就隐藏按钮
+   */
+  followedInHidden: Boolean
 })
+
+const emit = defineEmits(['click', 'follow', 'unfollow'])
+
+const handleIconClick = () => {
+  if (props.loading) return
+  emit('follow')
+}
 </script>
 
 <template>
-  <view class="ux-follow-author-avatar">
-    <tt-avatar :src="props.author.avatarLarger" />
-    <view class="ux-follow-author-avatar__icon">
+  <view class="tt-follow-avatar">
+    <tt-avatar :src="src" />
+    <view
+      v-if="props.followed"
+      class="tt-follow-avatar__icon"
+      @click="handleIconClick"
+    >
       <image
-        class="ux-follow-author-avatar__follow-plus"
+        class="tt-follow-avatar__follow-plus"
         src="../static/icons/follow-plus.svg"
         mode="scaleToFill"
       />
